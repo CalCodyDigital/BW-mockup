@@ -56,3 +56,26 @@
 .testimonial-count{font-size:12px;letter-spacing:.16em;color:#6c3e91}
 @media(max-width:1000px){.testimonial-layout{gap:32px}.testimonial-feature{padding-left:28px}.testimonial-heading h2{font-size:29px}.bw-review .testimonial-slide blockquote{font-size:22px}}
 @media(max-width:760px){.testimonial-layout{grid-template-columns:1fr;gap:28px}.testimonial-heading h2{max-width:100%;font-size:28px;margin-bottom:18px}.testimonial-feature{border-left:0;border-top:1px solid #cdbedb;padding:28px 0 0}.testimonial-quote-mark{font-size:55px;margin-bottom:16px}.bw-review .testimonial-slide blockquote{font-size:21px}}
+
+/* Training locations: club colours and a clearer session timetable. */
+.location-schedule{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.location-schedule .location-card{padding:0;border:1px solid #ded4e7;border-radius:10px;overflow:hidden;background:white;box-shadow:0 4px 18px #24133308;transition:box-shadow .2s}
+.location-schedule .location-card:hover{box-shadow:0 8px 24px #24133318}
+.location-header{position:relative;isolation:isolate;overflow:hidden;background:#5e3680;padding:22px 24px;color:white}
+.location-schedule .day{position:relative;z-index:1;display:inline-block;background:#f3cf48;color:#241333;padding:4px 10px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.12em}
+.location-schedule h3{position:relative;z-index:1;font-size:27px;line-height:1.15;margin:14px 0 0;color:white}
+.location-field{position:absolute;right:-18px;top:-25px;width:150px;height:170px;border:1px solid #ffffff17;transform:rotate(24deg);z-index:0}
+.location-field:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px solid #ffffff17}
+.location-field:after{content:"";position:absolute;width:58px;height:58px;left:44px;top:54px;border:1px solid #ffffff17;border-radius:50%}
+.location-body{padding:22px 24px}
+.location-schedule .location-venue{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;margin:0 0 20px;color:#51485a;min-height:42px}
+.location-venue svg{flex-shrink:0;width:18px;height:20px;color:#6c3e91;margin-top:1px}
+.location-venue small{display:block;font-size:11px;letter-spacing:.07em;color:#796d83;margin-top:5px}
+.location-sessions{border-top:1px solid #ede5f2;padding-top:14px;display:grid;gap:10px}
+.location-session{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px}
+.age-group{background:#efe8f5;color:#5e3680;border-radius:4px;padding:5px 8px;font-size:11px;font-weight:700;white-space:nowrap}
+.session-time{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.session-time svg{width:15px;height:15px;color:#7c658e;flex-shrink:0}
+.location-schedule time{font-weight:700}
+@media(max-width:1100px){.location-schedule{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.location-schedule{grid-template-columns:1fr;gap:16px}.location-header{padding:20px 22px}.location-body{padding:20px 22px}.location-schedule h3{font-size:26px}}
