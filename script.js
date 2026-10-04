@@ -20,3 +20,14 @@ if(backgroundVideo&&videoToggle){
  motion.addEventListener('change',()=>{if(motion.matches)backgroundVideo.pause();});
  if(!motion.matches&&!navigator.connection?.saveData)play();
 }
+
+document.querySelectorAll('[data-testimonials]').forEach(region=>{
+ const slides=[...region.querySelectorAll('.testimonial-slide')];
+ const controls=region.querySelector('.testimonial-controls');
+ const count=region.querySelector('.testimonial-count');
+ let current=0;
+ const show=()=>{slides.forEach((slide,i)=>{slide.hidden=i!==current;});count.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');};
+ region.querySelector('[data-review-prev]').addEventListener('click',()=>{current=(current-1+slides.length)%slides.length;show();});
+ region.querySelector('[data-review-next]').addEventListener('click',()=>{current=(current+1)%slides.length;show();});
+ show();controls.hidden=false;
+});
